@@ -10,6 +10,8 @@ RSpec.feature "Projects", type: :feature do
     end
 
     scenario "should be successful" do
+      fill_in "Username", with: "Test username"
+      fill_in "Password", with: "Test password"
       fill_in "Description", with: "Test description"
       click_button "Create Project"
       expect(page).to have_content("Project was successfully created")
