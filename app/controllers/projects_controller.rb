@@ -12,11 +12,13 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
+    authenticate_student!
     @project = Project.new
   end
 
   # GET /projects/1/edit
   def edit
+    authenticate_student!
   end
 
   # POST /projects or /projects.json
@@ -49,6 +51,7 @@ class ProjectsController < ApplicationController
 
   # DELETE /projects/1 or /projects/1.json
   def destroy
+    authenticate_student!
     @project.destroy
     respond_to do |format|
       format.html { redirect_to projects_url, notice: "Project was successfully destroyed." }
