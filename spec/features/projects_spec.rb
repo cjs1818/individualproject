@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+#dude this is correct what the heck
+
 RSpec.feature "Projects", type: :feature do
   context "Create new project" do
     before(:each) do
